@@ -1,439 +1,512 @@
-import { Card } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, TrendingDown, AlertCircle, CheckCircle2 } from "lucide-react";
+import { TrendingUp, TrendingDown, AlertCircle, CheckCircle, Target, Users, Eye, MousePointer, BarChart3 } from "lucide-react";
 
 const ContentAudit = () => {
   return (
-    <section id="content" className="py-16 bg-muted/30">
+    <section id="content-audit" className="py-16 bg-background">
       <div className="container mx-auto px-6">
-        <div className="mb-12">
-          <Badge className="mb-4 bg-primary text-primary-foreground">Section 1</Badge>
-          <h2 className="text-4xl font-bold text-foreground mb-4">Content Audit</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl">
-            Analyzing 12 months of performance data across 2,006 pages and 93,739 search queries to identify what's driving results and what needs improvement.
-          </p>
-        </div>
-
-        {/* Overall Performance */}
-        <Card className="p-8 mb-8 bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20">
-          <h3 className="text-2xl font-bold text-foreground mb-6">Overall Performance at a Glance</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-background rounded-xl p-6 shadow-sm">
-              <p className="text-sm text-muted-foreground mb-1">Total Pages</p>
-              <p className="text-3xl font-bold text-foreground">2,006</p>
-            </div>
-            <div className="bg-background rounded-xl p-6 shadow-sm">
-              <p className="text-sm text-muted-foreground mb-1">Search Queries</p>
-              <p className="text-3xl font-bold text-foreground">93,739</p>
-            </div>
-            <div className="bg-background rounded-xl p-6 shadow-sm">
-              <p className="text-sm text-muted-foreground mb-1">Average CTR</p>
-              <p className="text-3xl font-bold text-warning">0.34%</p>
-            </div>
-            <div className="bg-background rounded-xl p-6 shadow-sm">
-              <p className="text-sm text-muted-foreground mb-1">Avg Position</p>
-              <p className="text-3xl font-bold text-foreground">18.9</p>
-              <p className="text-xs text-muted-foreground mt-1">Mostly page 2</p>
-            </div>
-          </div>
-          <div className="mt-6 p-4 bg-background rounded-lg">
-            <p className="text-sm text-foreground">
-              <strong>Key Insight:</strong> VIDA Select shows up over 3 million times annually on Google, but only receives ~10,000 clicks. This indicates strong visibility but a mismatch between page content and user search intent.
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Content Audit</h2>
+            <p className="text-xl text-muted-foreground">
+              VIDA Select Content Audit - Data Source: Google Search Console (12-month average)
             </p>
           </div>
-        </Card>
 
-        {/* Brand vs Non-Brand */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <Card className="p-6 border-2 border-success/20 bg-success/5">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-success/20 flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 text-success" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground">Brand Searches</h4>
-                <Badge variant="outline" className="mt-1 border-success text-success">5.3% CTR</Badge>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground mb-3">
-              Users searching for "vida select" or "vida matchmaking" already know and trust the brand.
-            </p>
-            <ul className="text-sm space-y-2 text-foreground">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                <span>High trust and click intent</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
-                <span>Strong conversion potential</span>
-              </li>
-            </ul>
+          {/* 1. Introduction */}
+          <Card className="mb-8 border-accent">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Eye className="w-6 h-6 text-primary" />
+                Introduction
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-base leading-relaxed">
+                Over the past 12 months, VIDA Select's website has been getting good visibility on Google. People are seeing your pages in search results — that's what we call impressions. But the challenge is that most of those people are not clicking to visit the website. This report explains what's working well, what isn't, and why some pages — especially the login pages — are holding back performance. We'll go through the findings step by step, in simple words, so you can understand how the data connects to real business outcomes.
+              </p>
+            </CardContent>
           </Card>
 
-          <Card className="p-6 border-2 border-warning/20 bg-warning/5">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-warning/20 flex items-center justify-center">
-                <TrendingDown className="w-5 h-5 text-warning" />
+          {/* 2. Overall Performance */}
+          <Card className="mb-8 border-primary/20">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <BarChart3 className="w-6 h-6 text-primary" />
+                Overall Performance at a Glance
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="p-4 bg-accent/50 rounded-lg">
+                  <div className="text-sm text-muted-foreground mb-1">Total Pages Analyzed</div>
+                  <div className="text-3xl font-bold text-foreground">2,006</div>
+                </div>
+                <div className="p-4 bg-accent/50 rounded-lg">
+                  <div className="text-sm text-muted-foreground mb-1">Total Search Queries</div>
+                  <div className="text-3xl font-bold text-foreground">93,739</div>
+                </div>
+                <div className="p-4 bg-accent/50 rounded-lg">
+                  <div className="text-sm text-muted-foreground mb-1">Average CTR</div>
+                  <div className="text-3xl font-bold text-foreground">0.34%</div>
+                </div>
+                <div className="p-4 bg-accent/50 rounded-lg">
+                  <div className="text-sm text-muted-foreground mb-1">Average Google Position</div>
+                  <div className="text-3xl font-bold text-foreground">18.9</div>
+                  <div className="text-xs text-muted-foreground mt-1">(mostly page 2)</div>
+                </div>
+                <div className="p-4 bg-accent/50 rounded-lg md:col-span-2">
+                  <div className="text-sm text-muted-foreground mb-1">Analysis Period</div>
+                  <div className="text-2xl font-bold text-foreground">12-month average</div>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-foreground">Non-Brand Searches</h4>
-                <Badge variant="outline" className="mt-1 border-warning text-warning">0.3% CTR</Badge>
+
+              <div className="p-6 bg-muted/50 rounded-lg space-y-3">
+                <h4 className="font-semibold text-lg mb-3">In simple terms:</h4>
+                <div className="space-y-2">
+                  <p className="flex items-start gap-2">
+                    <span className="text-primary mt-1">👉</span>
+                    <span>VIDA Select shows up a lot on Google — over 3 million times in a year.</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-primary mt-1">👉</span>
+                    <span>But people only clicked around 10,000 times.</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="text-primary mt-1">👉</span>
+                    <span>That's a sign that many pages are being seen but not chosen.</span>
+                  </p>
+                </div>
+                <p className="mt-4 text-sm">
+                  The main reason is <strong>search intent</strong> — meaning what users actually want when they search. Some of your pages match what people want, but some (especially the "login" ones) don't.
+                </p>
               </div>
-            </div>
-            <p className="text-sm text-muted-foreground mb-3">
-              Generic searches like "elite matchmaking services" or "dating apps for professionals".
-            </p>
-            <ul className="text-sm space-y-2 text-foreground">
-              <li className="flex items-start gap-2">
-                <AlertCircle className="w-4 h-4 text-warning mt-0.5 flex-shrink-0" />
-                <span>Low brand awareness</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <AlertCircle className="w-4 h-4 text-warning mt-0.5 flex-shrink-0" />
-                <span>Need stronger value proposition</span>
-              </li>
-            </ul>
+            </CardContent>
           </Card>
-        </div>
 
-        {/* What's Working Well */}
-        <Card className="p-8 mb-8 border-2 border-success/30">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-success" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">What's Working Well</h3>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-background rounded-xl p-6">
-              <div className="flex items-start justify-between mb-3">
-                <h4 className="font-semibold text-lg text-foreground">1. Elite & Luxury Dating Content</h4>
-                <Badge className="bg-success text-success-foreground">3x Better</Badge>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Pages focused on high-end dating, exclusivity, and premium matchmaking perform 3x better than site average.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="bg-muted/50 rounded-lg p-4">
-                  <p className="text-xs text-muted-foreground mb-1">Why It Works</p>
-                  <ul className="text-sm space-y-1">
-                    <li>• Message matches audience intent</li>
-                    <li>• Personalized expert content</li>
-                    <li>• Lower niche competition</li>
-                  </ul>
-                </div>
-                <div className="bg-muted/50 rounded-lg p-4">
-                  <p className="text-xs text-muted-foreground mb-1">Example Keywords</p>
-                  <ul className="text-sm space-y-1">
-                    <li>• "Elite matchmaking"</li>
-                    <li>• "Millionaire dating sites"</li>
-                    <li>• "Luxury dating services"</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-background rounded-xl p-6">
-              <div className="flex items-start justify-between mb-3">
-                <h4 className="font-semibold text-lg text-foreground">2. Profile Creation Guides</h4>
-                <Badge className="bg-success text-success-foreground">High Engagement</Badge>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Practical "how-to" guides for improving dating profiles attract users serious about their dating life.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                  <span className="text-sm font-medium">/short-dating-profile-examples/</span>
-                  <span className="text-sm font-bold text-success">59,225 clicks</span>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                  <span className="text-sm font-medium">/dating-profile-examples-for-men/</span>
-                  <span className="text-sm font-bold text-success">23,293 clicks</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-background rounded-xl p-6">
-              <div className="flex items-start justify-between mb-3">
-                <h4 className="font-semibold text-lg text-foreground">3. Comparison & Premium Features</h4>
-                <Badge className="bg-info text-info-foreground">Decision Stage</Badge>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Pages comparing paid dating app versions attract users in the research and decision phase.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                  <span className="text-sm font-medium">/tinder-plus-vs-tinder-gold/</span>
-                  <span className="text-sm font-bold text-info">16,000 clicks</span>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                  <span className="text-sm font-medium">/hinge-plus-vs-hingex/</span>
-                  <span className="text-sm font-bold text-info">14,000 clicks</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Card>
-
-        {/* What's Not Working */}
-        <Card className="p-8 mb-8 border-2 border-destructive/30 bg-destructive/5">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-xl bg-destructive/20 flex items-center justify-center">
-              <AlertCircle className="w-6 h-6 text-destructive" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">What's Not Working</h3>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-background rounded-xl p-6 border-l-4 border-destructive">
-              <h4 className="font-semibold text-lg text-foreground mb-3">A. Login Pages from Other Brands</h4>
-              <Badge variant="destructive" className="mb-4">Critical Issue</Badge>
+          {/* 3. Brand vs Non-Brand */}
+          <Card className="mb-8 border-accent">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="w-6 h-6 text-primary" />
+                How Brand vs Non-Brand Searches Behave
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-base">There's a big difference between two kinds of searches:</p>
               
-              <div className="overflow-x-auto mb-4">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b">
-                      <th className="text-left py-2 font-medium">Page</th>
-                      <th className="text-right py-2 font-medium">Clicks</th>
-                      <th className="text-right py-2 font-medium">Impressions</th>
-                      <th className="text-right py-2 font-medium">CTR</th>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="p-4 border-2 border-success/50 rounded-lg bg-success/5">
+                  <h4 className="font-bold text-lg mb-2 text-success">Brand Searches</h4>
+                  <p className="text-sm mb-3">People who already know VIDA Select and look for it by name ("vida select," "vida matchmaking"). These people trust you. They click often.</p>
+                  <div className="flex items-center gap-2">
+                    <Badge variant="default" className="text-lg px-3 py-1">CTR: 5.3%</Badge>
+                    <span className="text-success font-semibold">Great!</span>
+                  </div>
+                </div>
+
+                <div className="p-4 border-2 border-warning/50 rounded-lg bg-warning/5">
+                  <h4 className="font-bold text-lg mb-2 text-warning">Non-Brand Searches</h4>
+                  <p className="text-sm mb-3">People searching for general topics like "elite matchmaking services" or "dating apps for professionals." These people don't know VIDA yet.</p>
+                  <div className="flex items-center gap-2">
+                    <Badge variant="secondary" className="text-lg px-3 py-1">CTR: 0.3%</Badge>
+                    <span className="text-warning font-semibold">Quite low</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-4 bg-muted/50 rounded-lg mt-4">
+                <h4 className="font-semibold mb-2">What this means:</h4>
+                <p className="text-sm">
+                  Right now, most of the website's traffic is coming from people who already know you. We're not capturing enough new people who are exploring dating options but haven't heard of VIDA yet.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* 4. What's Working Well - COMPLETE with all details */}
+          <Card className="mb-8 border-success/30 bg-success/5">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <CheckCircle className="w-6 h-6 text-success" />
+                What's Working Well
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* Elite & Luxury Dating Content */}
+              <div className="p-6 border border-success/30 rounded-lg bg-background">
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">1.</span>
+                  Elite & Luxury Dating Content
+                </h3>
+                <p className="text-base mb-4">
+                  These pages are the heart of your brand — they talk about high-end dating, exclusivity, and premium matchmaking. They perform <strong>three times better</strong> than the site average because they attract the right audience: people who value quality, privacy, and expert help.
+                </p>
+                <div className="bg-muted/50 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold mb-2">Example:</h4>
+                  <p className="text-sm">"Elite matchmaking" and "millionaire dating sites" keywords bring in people who fit VIDA's services perfectly.</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-semibold">Why it works:</h4>
+                  <ul className="list-disc list-inside space-y-1 ml-4">
+                    <li>The message matches the audience's intent.</li>
+                    <li>The content feels personalized and expert.</li>
+                    <li>You're in a smaller niche, so competition is lower and trust is higher.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Profile Creation Guides */}
+              <div className="p-6 border border-success/30 rounded-lg bg-background">
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">2.</span>
+                  Profile Creation Guides
+                </h3>
+                <p className="text-base mb-4">
+                  These are practical "how to make your dating profile better" articles.
+                </p>
+                <div className="bg-muted/50 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold mb-2">Examples:</h4>
+                  <ul className="space-y-1 text-sm">
+                    <li>• <span className="font-medium">/short-dating-profile-examples/</span> → 59,225 clicks</li>
+                    <li>• <span className="font-medium">/10-irresistible-dating-profile-examples-for-men/</span> → 23,293 clicks</li>
+                  </ul>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-semibold">Why it works:</h4>
+                  <p className="text-sm">
+                    People searching for this type of content are already serious about improving their dating life. They are open to expert advice, which makes them potential VIDA clients. It's an easy entry point for future customers — they come for help and might stay for your service.
+                  </p>
+                </div>
+              </div>
+
+              {/* Comparison & Premium Feature Pages */}
+              <div className="p-6 border border-success/30 rounded-lg bg-background">
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">3.</span>
+                  Comparison & Premium Feature Pages
+                </h3>
+                <p className="text-base mb-4">
+                  These pages talk about paid versions of dating apps — like Tinder Gold, Hinge+, or CMB Premium.
+                </p>
+                <div className="bg-muted/50 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold mb-2">Examples:</h4>
+                  <ul className="space-y-1 text-sm">
+                    <li>• <span className="font-medium">/tinder-plus-vs-tinder-gold/</span> → 16K clicks</li>
+                    <li>• <span className="font-medium">/hinge-plus-vs-hingex/</span> → 14K clicks</li>
+                  </ul>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-semibold">Why it works:</h4>
+                  <p className="text-sm">
+                    These readers are in the "research and decision" stage — they're comparing platforms and ready to make choices. If we guide them well, we can position VIDA as the smarter, more effective alternative to these apps.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* 5. What's Not Working - COMPLETE with ALL login page data */}
+          <Card className="mb-8 border-destructive/30 bg-destructive/5">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <AlertCircle className="w-6 h-6 text-destructive" />
+                What's Not Working (and Why)
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* A. Login Pages - COMPLETE TABLE */}
+              <div className="p-6 border-2 border-destructive/50 rounded-lg bg-background">
+                <h3 className="text-xl font-bold mb-4 text-destructive flex items-center gap-2">
+                  <span className="text-2xl">A.</span>
+                  Login Pages from Other Brands
+                </h3>
+                <p className="text-base mb-4 font-semibold">
+                  These are the most problematic pages right now.
+                </p>
+
+                {/* Login Pages Table - COMPLETE */}
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse border border-border">
+                    <thead className="bg-muted">
+                      <tr>
+                        <th className="border border-border p-3 text-left">Page</th>
+                        <th className="border border-border p-3 text-right">Clicks</th>
+                        <th className="border border-border p-3 text-right">Impressions</th>
+                        <th className="border border-border p-3 text-right">CTR</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-border p-3 font-mono text-sm">/pof-login-page/</td>
+                        <td className="border border-border p-3 text-right">62</td>
+                        <td className="border border-border p-3 text-right">189,806</td>
+                        <td className="border border-border p-3 text-right text-destructive font-bold">0.03%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-3 font-mono text-sm">/eharmony-login/</td>
+                        <td className="border border-border p-3 text-right">61</td>
+                        <td className="border border-border p-3 text-right">102,400</td>
+                        <td className="border border-border p-3 text-right text-destructive font-bold">0.06%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-3 font-mono text-sm">/match-com-login/</td>
+                        <td className="border border-border p-3 text-right">0</td>
+                        <td className="border border-border p-3 text-right">1,685</td>
+                        <td className="border border-border p-3 text-right text-destructive font-bold">0%</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-3 font-mono text-sm">/seekingarrangement-login-page/</td>
+                        <td className="border border-border p-3 text-right">3</td>
+                        <td className="border border-border p-3 text-right">1,991</td>
+                        <td className="border border-border p-3 text-right text-destructive font-bold">0.15%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="bg-muted/50 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2">What's happening:</h4>
+                    <p className="text-sm">
+                      When someone types "POF login" or "Match.com login," they just want to sign in to their account — not read an article. So even if your site shows up, nobody clicks, because the intent doesn't match. And when a few people do click, they leave immediately — which tells Google your page isn't helpful.
+                    </p>
+                  </div>
+
+                  <div className="bg-destructive/10 p-4 rounded-lg border border-destructive/30">
+                    <h4 className="font-semibold mb-2 text-destructive">Why it's harmful:</h4>
+                    <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
+                      <li>Google lowers trust in your website because of high bounce rates and poor CTR.</li>
+                      <li>These pages create no business value — they're not your audience.</li>
+                      <li>They dilute VIDA's premium brand and can even look like an attempt to copy other brands' visibility.</li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-primary/10 rounded-lg border-l-4 border-primary">
+                    <h4 className="font-semibold mb-2">In short:</h4>
+                    <p className="text-sm">
+                      These pages bring traffic that doesn't convert and can harm your whole site's reputation. They should be removed or redirected to real, relevant content like "POF review" or "dating apps for professionals."
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* B. Generic "How-To" Articles */}
+              <div className="p-6 border border-destructive/30 rounded-lg bg-background">
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">B.</span>
+                  Generic "How-To" Articles
+                </h3>
+                <p className="text-base mb-3">
+                  Some older guides are too general or too long for the average reader. For example, "how to start a conversation online" — people expect quick answers, not long articles.
+                </p>
+                <div className="bg-muted/50 p-3 rounded-lg mb-3">
+                  <h4 className="font-semibold text-sm mb-1">Problem:</h4>
+                  <p className="text-sm">
+                    Your content gives detailed advice, but today's readers want faster, simpler formats — lists, visuals, examples.
+                  </p>
+                </div>
+                <div className="bg-destructive/10 p-3 rounded-lg">
+                  <h4 className="font-semibold text-sm mb-1">Result:</h4>
+                  <p className="text-sm">
+                    CTR below 0.3% — people scroll past because it doesn't look like the quick help they expected.
+                  </p>
+                </div>
+              </div>
+
+              {/* C. Sugar Dating Topics */}
+              <div className="p-6 border border-destructive/30 rounded-lg bg-background">
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">C.</span>
+                  Sugar Dating Topics
+                </h3>
+                <p className="text-base mb-3">
+                  These pages rank low (around page 4) and have very low engagement (0.16% CTR).
+                </p>
+                <div className="bg-muted/50 p-3 rounded-lg mb-3">
+                  <h4 className="font-semibold text-sm mb-1">Reason:</h4>
+                  <p className="text-sm">
+                    They attract a completely different audience — not people looking for long-term relationships or professional matchmaking. Keeping focus on VIDA's premium niche (executives, professionals, elite singles) will attract better-quality leads.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Continue with remaining sections... */}
+          {/* 6. Understanding Positions and Rankings */}
+          <Card className="mb-8 border-accent">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Target className="w-6 h-6 text-primary" />
+                Understanding Positions and Rankings
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="mb-4">On Google, your ranking (position) determines how visible you are:</p>
+              
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-border">
+                  <thead className="bg-muted">
+                    <tr>
+                      <th className="border border-border p-3 text-left">Position Range</th>
+                      <th className="border border-border p-3 text-left">Description</th>
+                      <th className="border border-border p-3 text-left">What It Means</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b">
-                      <td className="py-2">/pof-login-page/</td>
-                      <td className="text-right py-2">62</td>
-                      <td className="text-right py-2">189,806</td>
-                      <td className="text-right py-2 text-destructive font-medium">0.03%</td>
+                    <tr>
+                      <td className="border border-border p-3 font-bold text-success">Position 1-3</td>
+                      <td className="border border-border p-3 font-semibold">Prime Visibility</td>
+                      <td className="border border-border p-3">You're at the top of search results. These positions get most of the clicks (up to 30% CTR for #1 position). This is where you want to be for your most important keywords.</td>
                     </tr>
-                    <tr className="border-b">
-                      <td className="py-2">/eharmony-login/</td>
-                      <td className="text-right py-2">61</td>
-                      <td className="text-right py-2">102,400</td>
-                      <td className="text-right py-2 text-destructive font-medium">0.06%</td>
+                    <tr>
+                      <td className="border border-border p-3 font-bold text-warning">Position 4-10</td>
+                      <td className="border border-border p-3 font-semibold">Visible but competing</td>
+                      <td className="border border-border p-3">You're on the first page, but below the fold. You'll get some clicks (2-10% CTR), but many users won't scroll down this far. There's strong competition for attention.</td>
                     </tr>
-                    <tr className="border-b">
-                      <td className="py-2">/match-com-login/</td>
-                      <td className="text-right py-2">0</td>
-                      <td className="text-right py-2">1,685</td>
-                      <td className="text-right py-2 text-destructive font-medium">0%</td>
+                    <tr>
+                      <td className="border border-border p-3 font-bold text-destructive">Position 11-20+</td>
+                      <td className="border border-border p-3 font-semibold">Page 2+ (buried)</td>
+                      <td className="border border-border p-3">Most users never see page 2. CTR drops to under 1%. Even if you rank here for thousands of keywords, it generates minimal traffic. This is where most of your pages currently sit (average position 18.9).</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+            </CardContent>
+          </Card>
 
-              <div className="bg-destructive/10 rounded-lg p-4 space-y-2">
-                <p className="font-medium text-sm text-foreground">Why This Hurts:</p>
-                <ul className="text-sm text-muted-foreground space-y-1 ml-4">
-                  <li>• High bounce rates lower Google's trust in the entire site</li>
-                  <li>• No business value - wrong audience entirely</li>
-                  <li>• Dilutes premium brand perception</li>
-                  <li>• Can appear as attempt to copy other brands</li>
-                </ul>
-                <p className="text-sm font-medium text-destructive mt-3">
-                  Recommendation: Remove or redirect to relevant content like "POF Review" or "Dating Apps for Professionals"
+          {/* Rest of sections following same pattern... */}
+          <Card className="mb-8 border-primary/20">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Target className="w-6 h-6 text-primary" />
+                Missing Opportunities
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="grid md:grid-cols-1 gap-4">
+                <div className="p-4 border border-primary/30 rounded-lg bg-primary/5">
+                  <h4 className="font-bold mb-2">1. LGBTQ+ Dating Content:</h4>
+                  <p className="text-sm">Very few pages, though there's huge demand. This audience matches VIDA's premium and safe dating approach.</p>
+                </div>
+                <div className="p-4 border border-primary/30 rounded-lg bg-primary/5">
+                  <h4 className="font-bold mb-2">2. Professional & Executive Dating:</h4>
+                  <p className="text-sm">Perfect match for VIDA's ideal customers (busy, successful people). Needs more focused content.</p>
+                </div>
+                <div className="p-4 border border-primary/30 rounded-lg bg-primary/5">
+                  <h4 className="font-bold mb-2">3. Location-Based Pages:</h4>
+                  <p className="text-sm">Local searches like "matchmaking in NYC" or "dating services in Los Angeles" have low competition and strong intent. Adding content for major cities can help reach high-value leads faster.</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* 8. Key Category Summary Table */}
+          <Card className="mb-8 border-accent">
+            <CardHeader>
+              <CardTitle>Key Category Summary</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-border">
+                  <thead className="bg-muted">
+                    <tr>
+                      <th className="border border-border p-3 text-left">Category</th>
+                      <th className="border border-border p-3 text-center">Avg CTR</th>
+                      <th className="border border-border p-3 text-left">What It Means</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="bg-success/10">
+                      <td className="border border-border p-3 font-medium">Elite / Luxury Dating</td>
+                      <td className="border border-border p-3 text-center font-bold text-success">0.92%</td>
+                      <td className="border border-border p-3">Best fit for VIDA's services; continue building around this.</td>
+                    </tr>
+                    <tr className="bg-success/5">
+                      <td className="border border-border p-3 font-medium">Profile Optimization</td>
+                      <td className="border border-border p-3 text-center font-bold text-success">0.72%</td>
+                      <td className="border border-border p-3">Great engagement; bring more variations (by gender, age, profession).</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-border p-3 font-medium">Premium Features & Comparison</td>
+                      <td className="border border-border p-3 text-center font-bold">0.50–0.70%</td>
+                      <td className="border border-border p-3">Strong conversion potential; keep growing.</td>
+                    </tr>
+                    <tr className="bg-warning/10">
+                      <td className="border border-border p-3 font-medium">How-To Guides</td>
+                      <td className="border border-border p-3 text-center font-bold text-warning">0.22%</td>
+                      <td className="border border-border p-3">Needs redesign or simplification.</td>
+                    </tr>
+                    <tr className="bg-destructive/10">
+                      <td className="border border-border p-3 font-medium">Login Pages</td>
+                      <td className="border border-border p-3 text-center font-bold text-destructive">0.04%</td>
+                      <td className="border border-border p-3">Must be removed; no value and hurts rankings.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* 9. Big Picture Takeaways */}
+          <Card className="mb-8 border-primary/30 bg-primary/5">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <TrendingUp className="w-6 h-6 text-primary" />
+                Big Picture Takeaways
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-3">
+                <div className="p-4 bg-background rounded-lg border-l-4 border-success">
+                  <p className="font-semibold mb-1">1. Your brand is strong.</p>
+                  <p className="text-sm">People who know VIDA trust it and click it.</p>
+                </div>
+                
+                <div className="p-4 bg-background rounded-lg border-l-4 border-warning">
+                  <p className="font-semibold mb-1">2. Your challenge is discoverability.</p>
+                  <p className="text-sm">People who don't know VIDA yet aren't finding you enough.</p>
+                </div>
+                
+                <div className="p-4 bg-background rounded-lg border-l-4 border-primary">
+                  <p className="font-semibold mb-1">3. Your best content already proves what works:</p>
+                  <p className="text-sm">Premium, niche, expert-led articles.</p>
+                </div>
+                
+                <div className="p-4 bg-background rounded-lg border-l-4 border-destructive">
+                  <p className="font-semibold mb-1">4. Some old or irrelevant pages are holding you back.</p>
+                  <p className="text-sm">The login pages are the biggest issue — they waste visibility and lower your overall site score.</p>
+                </div>
+              </div>
+
+              <div className="p-4 bg-primary/10 rounded-lg mt-4">
+                <p className="text-sm">
+                  <strong>Bottom line:</strong> Once these are removed and focus shifts toward your high-performing content types, VIDA can grow its organic reach without needing new advertising or massive content expansion.
                 </p>
               </div>
-            </div>
+            </CardContent>
+          </Card>
 
-            <div className="bg-background rounded-xl p-6 border-l-4 border-warning">
-              <h4 className="font-semibold text-lg text-foreground mb-3">B. Generic "How-To" Articles</h4>
-              <Badge variant="outline" className="mb-4 border-warning text-warning">Needs Improvement</Badge>
-              
-              <p className="text-sm text-muted-foreground mb-3">
-                Some older guides are too general or lengthy for modern readers who expect quick, visual answers.
+          {/* 10. In Simple Words */}
+          <Card className="mb-8 border-accent">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                💡 In Simple Words
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-base leading-relaxed">
+                Think of Google visibility like foot traffic outside your store: You have a million people walking by, but only a few are stepping inside. Some windows (pages) display what your store sells — those get attention. But other windows show products from completely different stores (login pages for Match.com, POF) — and people walk past confused.
               </p>
-              <div className="bg-warning/10 rounded-lg p-4">
-                <p className="text-sm font-medium text-foreground mb-2">Solution:</p>
-                <ul className="text-sm text-muted-foreground space-y-1 ml-4">
-                  <li>• Convert to list formats with clear examples</li>
-                  <li>• Add more visuals and infographics</li>
-                  <li>• Break long articles into digestible sections</li>
-                  <li>• Include quick takeaway summaries</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bg-background rounded-xl p-6 border-l-4 border-warning">
-              <h4 className="font-semibold text-lg text-foreground mb-3">C. Sugar Dating Topics</h4>
-              <Badge variant="outline" className="mb-4 border-warning text-warning">Low Priority</Badge>
-              
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <p className="text-sm font-medium text-foreground mb-2">Current Performance:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Average position: Page 4</li>
-                    <li>• CTR: 0.16%</li>
-                    <li>• Low engagement</li>
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground mb-2">Why It Doesn't Fit:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Different audience intent</li>
-                    <li>• Not aligned with premium positioning</li>
-                    <li>• Dilutes brand focus</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Card>
-
-        {/* Missing Opportunities */}
-        <Card className="p-8 border-2 border-info/30 bg-info/5">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-xl bg-info/20 flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-info" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground">Missing Opportunities</h3>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background rounded-xl p-6">
-              <h4 className="font-semibold text-foreground mb-3">LGBTQ+ Dating Content</h4>
-              <p className="text-sm text-muted-foreground mb-4">
-                Very few pages despite huge demand. Perfect match for VIDA's premium and safe dating approach.
+              <p className="text-base leading-relaxed">
+                Right now, VIDA Select has excellent "windows" for elite matchmaking and dating profile help. Those are attracting the right customers. The goal is to add more of those premium windows and remove the confusing ones that are just taking up space.
               </p>
-              <Badge variant="outline" className="border-info text-info">High Potential</Badge>
-            </div>
-
-            <div className="bg-background rounded-xl p-6">
-              <h4 className="font-semibold text-foreground mb-3">Professional & Executive Dating</h4>
-              <p className="text-sm text-muted-foreground mb-4">
-                Ideal for VIDA's target customer (busy, successful professionals) but needs more focused content.
-              </p>
-              <Badge variant="outline" className="border-info text-info">Perfect Fit</Badge>
-            </div>
-
-            <div className="bg-background rounded-xl p-6">
-              <h4 className="font-semibold text-foreground mb-3">Location-Based Pages</h4>
-              <p className="text-sm text-muted-foreground mb-4">
-                Local searches like "matchmaking in NYC" have low competition and strong purchase intent.
-              </p>
-              <Badge variant="outline" className="border-info text-info">Quick Wins</Badge>
-            </div>
-          </div>
-        </Card>
-
-        {/* Key Category Summary */}
-        <Card className="p-8 mt-8 bg-gradient-to-br from-muted/50 to-background">
-          <h3 className="text-2xl font-bold text-foreground mb-6">Key Category Performance Summary</h3>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b-2 border-border">
-                  <th className="text-left py-3 px-2 font-semibold">Category</th>
-                  <th className="text-center py-3 px-2 font-semibold">Avg CTR</th>
-                  <th className="text-left py-3 px-2 font-semibold">Insight</th>
-                  <th className="text-center py-3 px-2 font-semibold">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Elite / Luxury Dating</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge className="bg-success text-success-foreground">0.92%</Badge>
-                  </td>
-                  <td className="py-4 px-2 text-sm text-muted-foreground">Best fit for VIDA's services</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge variant="outline" className="border-success text-success">Continue Building</Badge>
-                  </td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Profile Optimization</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge className="bg-success text-success-foreground">0.72%</Badge>
-                  </td>
-                  <td className="py-4 px-2 text-sm text-muted-foreground">Great engagement</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge variant="outline" className="border-success text-success">Expand Variations</Badge>
-                  </td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Premium Features</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge className="bg-info text-info-foreground">0.50-0.70%</Badge>
-                  </td>
-                  <td className="py-4 px-2 text-sm text-muted-foreground">Strong conversion potential</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge variant="outline" className="border-info text-info">Keep Growing</Badge>
-                  </td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">How-To Guides</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge variant="outline" className="border-warning text-warning">0.22%</Badge>
-                  </td>
-                  <td className="py-4 px-2 text-sm text-muted-foreground">Needs redesign or simplification</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge variant="outline" className="border-warning text-warning">Redesign</Badge>
-                  </td>
-                </tr>
-                <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Login Pages</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge variant="destructive">0.04%</Badge>
-                  </td>
-                  <td className="py-4 px-2 text-sm text-muted-foreground">No value, hurts rankings</td>
-                  <td className="text-center py-4 px-2">
-                    <Badge variant="destructive">Remove</Badge>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </Card>
-
-        {/* Big Picture Takeaways */}
-        <Card className="p-8 mt-8 bg-gradient-primary text-primary-foreground">
-          <h3 className="text-2xl font-bold mb-6">Big Picture Takeaways</h3>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold mb-1">Strong Brand Recognition</p>
-                  <p className="text-sm opacity-90">People who know VIDA trust it and click it.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold mb-1">Best Content Proves Success</p>
-                  <p className="text-sm opacity-90">Premium, niche, expert-led articles already work well.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold mb-1">Discoverability Challenge</p>
-                  <p className="text-sm opacity-90">New prospects who don't know VIDA aren't finding you enough.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold mb-1">Pages Holding You Back</p>
-                  <p className="text-sm opacity-90">Login pages waste visibility and lower overall site score.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 p-6 bg-white/10 rounded-xl backdrop-blur-sm">
-            <p className="text-lg font-medium mb-2">The Path Forward</p>
-            <p className="text-sm opacity-90">
-              Remove problematic pages and focus on high-performing content types. This will grow organic reach without needing massive content expansion or increased advertising spend.
-            </p>
-          </div>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );
