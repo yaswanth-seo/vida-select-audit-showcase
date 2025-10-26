@@ -1,10 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, AlertCircle, Search } from "lucide-react";
-
 const OnPageAudit = () => {
-  return (
-    <section id="onpage" className="py-16 bg-background">
+  return <section id="onpage" className="py-16 bg-background">
       <div className="container mx-auto px-6">
         <div className="mb-12">
           <Badge className="mb-4 bg-info text-info-foreground">Section 2</Badge>
@@ -334,15 +332,13 @@ const OnPageAudit = () => {
           <div className="mt-6 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
             <p className="font-semibold mb-2">Expected Impact:</p>
             <ul className="space-y-1 opacity-90">
-              <li>• Improve click-through rates by 30-50%</li>
+              <li>• Improve click-through rates</li>
               <li>• Boost time on site</li>
               <li>• Help Google prioritize pages that bring qualified leads</li>
             </ul>
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default OnPageAudit;
