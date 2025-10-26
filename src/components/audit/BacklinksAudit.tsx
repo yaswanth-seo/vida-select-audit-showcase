@@ -1,10 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link as LinkIcon, TrendingUp, Shield, AlertTriangle, AlertCircle } from "lucide-react";
-
 const BacklinksAudit = () => {
-  return (
-    <section id="backlinks" className="py-16 bg-muted/30">
+  return <section id="backlinks" className="py-16 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="mb-12">
           <Badge className="mb-4 bg-accent text-accent-foreground">Section 3</Badge>
@@ -383,7 +381,7 @@ const BacklinksAudit = () => {
                     <Badge variant="outline">8,900</Badge>
                   </td>
                   <td className="text-center py-4 px-2">
-                    <Badge variant="outline">32%</Badge>
+                    <Badge variant="outline">-</Badge>
                   </td>
                 </tr>
               </tbody>
@@ -594,8 +592,6 @@ const BacklinksAudit = () => {
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BacklinksAudit;
