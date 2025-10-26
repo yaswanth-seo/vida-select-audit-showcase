@@ -54,12 +54,12 @@ const LLMsAudit = () => {
                 <tr className="border-b border-border bg-background">
                   <td className="py-4 px-2 font-medium">Citations</td>
                   <td className="py-4 px-2 text-muted-foreground">Instances where an AI system includes VIDA Select as a source or reference in its response.</td>
-                  <td className="py-4 px-2 text-muted-foreground">Citations act like "backlinks" for AI — the more citations, the higher the trust.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Citations act like "backlinks" for AI: the more citations, the higher the trust.</td>
                 </tr>
                 <tr className="border-b border-border bg-background">
                   <td className="py-4 px-2 font-medium">Sentiment</td>
                   <td className="py-4 px-2 text-muted-foreground">How positive, neutral, or negative the AI-generated mentions are about VIDA (scored from 0–100).</td>
-                  <td className="py-4 px-2 text-muted-foreground">Reflects AI's tone toward the brand — high sentiment = more trustworthy reputation.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Reflects AI's tone toward the brand: high sentiment = more trustworthy reputation.</td>
                 </tr>
                 <tr className="border-b border-border bg-background">
                   <td className="py-4 px-2 font-medium">Coverage</td>

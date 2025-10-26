@@ -207,7 +207,7 @@ const ContentAudit = () => {
                   Comparison & Premium Feature Pages
                 </h3>
                 <p className="text-base mb-4">
-                  These pages talk about paid versions of dating apps — like Tinder Gold, Hinge+, or CMB Premium.
+                  These pages talk about paid versions of dating apps like Tinder Gold, Hinge+, or CMB Premium.
                 </p>
                 <div className="bg-muted/50 p-4 rounded-lg mb-4">
                   <h4 className="font-semibold mb-2">Examples:</h4>
@@ -297,7 +297,7 @@ const ContentAudit = () => {
                     <h4 className="font-semibold mb-2 text-destructive">Why it's harmful:</h4>
                     <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
                       <li>Google lowers trust in your website because of high bounce rates and poor CTR.</li>
-                      <li>These pages create no business value — they're not your audience.</li>
+                      <li>These pages create no business value; they're not your audience.</li>
                       <li>They dilute VIDA's premium brand and can even look like an attempt to copy other brands' visibility.</li>
                     </ul>
                   </div>
@@ -318,7 +318,7 @@ const ContentAudit = () => {
                   Generic "How-To" Articles
                 </h3>
                 <p className="text-base mb-3">
-                  Some older guides are too general or too long for the average reader. For example, "how to start a conversation online" — people expect quick answers, not long articles.
+                  Some older guides are too general or too long for the average reader. For example, "how to start a conversation online": people expect quick answers, not long articles.
                 </p>
                 <div className="bg-muted/50 p-3 rounded-lg mb-3">
                   <h4 className="font-semibold text-sm mb-1">Problem:</h4>
@@ -496,7 +496,7 @@ const ContentAudit = () => {
                 
                 <div className="p-4 bg-background rounded-lg border-l-4 border-destructive">
                   <p className="font-semibold mb-1">4. Some old or irrelevant pages are holding you back.</p>
-                  <p className="text-sm">The login pages are the biggest issue — they waste visibility and lower your overall site score.</p>
+                  <p className="text-sm">The login pages are the biggest issue; they waste visibility and lower your overall site score.</p>
                 </div>
               </div>
 

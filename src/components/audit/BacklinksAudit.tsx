@@ -472,7 +472,7 @@ const BacklinksAudit = () => {
                 <tr className="border-b border-border bg-background">
                   <td className="py-4 px-2 font-medium">Authority Concentration</td>
                   <td className="py-4 px-2 text-muted-foreground">1% of links (the top 90) drive 95% of ranking value.</td>
-                  <td className="py-4 px-2 text-muted-foreground">Keep nurturing these relationships — offer updated quotes or new expert mentions to the same sites.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Keep nurturing these relationships: offer updated quotes or new expert mentions to the same sites.</td>
                 </tr>
                 <tr className="border-b border-border bg-background">
                   <td className="py-4 px-2 font-medium">Indexation Health</td>
@@ -492,7 +492,7 @@ const BacklinksAudit = () => {
                 <tr className="border-b border-border bg-background">
                   <td className="py-4 px-2 font-medium">Topical Alignment</td>
                   <td className="py-4 px-2 text-muted-foreground">Best links come from dating/lifestyle niches.</td>
-                  <td className="py-4 px-2 text-muted-foreground">Strengthen this — pitch new articles to similar publishers (AskMen, Business Insider, EliteDaily).</td>
+                  <td className="py-4 px-2 text-muted-foreground">Strengthen this: pitch new articles to similar publishers (AskMen, Business Insider, EliteDaily).</td>
                 </tr>
               </tbody>
             </table>
