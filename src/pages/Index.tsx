@@ -21,7 +21,7 @@ const Index = () => {
           <h3 className="text-2xl font-bold mb-4">VIDA Select SEO Audit - Complete Report</h3>
           <p className="text-lg opacity-90 mb-6">A comprehensive analysis covering all aspects of SEO performance</p>
           <p className="text-sm opacity-75">
-            Report prepared with data-driven insights from 12 months of analysis
+            Report prepared with data-driven insights from 12 months of analysis data
           </p>
         </div>
       </footer>
