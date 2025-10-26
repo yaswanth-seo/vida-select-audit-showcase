@@ -40,48 +40,66 @@ const ContentAudit = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="p-4 bg-accent/50 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-1">Total Pages Analyzed</div>
-                  <div className="text-3xl font-bold text-foreground">2,006</div>
+                <div className="relative overflow-hidden p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-2 border-primary/20 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-primary/5 rounded-full blur-2xl"></div>
+                  <div className="relative">
+                    <div className="text-sm font-medium text-muted-foreground mb-2">Total Pages Analyzed</div>
+                    <div className="text-3xl font-bold text-foreground">2,006</div>
+                  </div>
                 </div>
-                <div className="p-4 bg-accent/50 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-1">Total Search Queries</div>
-                  <div className="text-3xl font-bold text-foreground">93,739</div>
+                <div className="relative overflow-hidden p-6 bg-gradient-to-br from-info/10 via-info/5 to-transparent border-2 border-info/20 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-info/5 rounded-full blur-2xl"></div>
+                  <div className="relative">
+                    <div className="text-sm font-medium text-muted-foreground mb-2">Total Search Queries</div>
+                    <div className="text-3xl font-bold text-foreground">93,739</div>
+                  </div>
                 </div>
-                <div className="p-4 bg-accent/50 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-1">Average CTR</div>
-                  <div className="text-3xl font-bold text-foreground">0.34%</div>
+                <div className="relative overflow-hidden p-6 bg-gradient-to-br from-warning/10 via-warning/5 to-transparent border-2 border-warning/20 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-warning/5 rounded-full blur-2xl"></div>
+                  <div className="relative">
+                    <div className="text-sm font-medium text-muted-foreground mb-2">Average CTR</div>
+                    <div className="text-3xl font-bold text-foreground">0.34%</div>
+                  </div>
                 </div>
-                <div className="p-4 bg-accent/50 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-1">Average Google Position</div>
-                  <div className="text-3xl font-bold text-foreground">18.9</div>
-                  <div className="text-xs text-muted-foreground mt-1">(mostly page 2)</div>
+                <div className="relative overflow-hidden p-6 bg-gradient-to-br from-secondary/10 via-secondary/5 to-transparent border-2 border-secondary/20 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-secondary/5 rounded-full blur-2xl"></div>
+                  <div className="relative">
+                    <div className="text-sm font-medium text-muted-foreground mb-2">Average Google Position</div>
+                    <div className="text-3xl font-bold text-foreground">18.9</div>
+                    <div className="text-xs text-muted-foreground mt-1">(mostly page 2)</div>
+                  </div>
                 </div>
-                <div className="p-4 bg-accent/50 rounded-lg md:col-span-2">
-                  <div className="text-sm text-muted-foreground mb-1">Analysis Period</div>
-                  <div className="text-2xl font-bold text-foreground">12-month average</div>
+                <div className="relative overflow-hidden p-6 bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border-2 border-accent/20 rounded-xl hover:shadow-lg transition-shadow md:col-span-2">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full blur-2xl"></div>
+                  <div className="relative">
+                    <div className="text-sm font-medium text-muted-foreground mb-2">Analysis Period</div>
+                    <div className="text-2xl font-bold text-foreground">12-month average</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-muted/50 rounded-lg space-y-3">
-                <h4 className="font-semibold text-lg mb-3">In simple terms:</h4>
-                <div className="space-y-2">
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>VIDA Select shows up a lot on Google, over 3 million times in a year.</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>But people only clicked around 10,000 times.</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span>That's a sign that many pages are being seen but not chosen.</span>
+              <div className="relative overflow-hidden p-6 bg-gradient-to-br from-success/10 via-success/5 to-transparent border-2 border-success/20 rounded-xl space-y-3">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-success/5 rounded-full blur-3xl"></div>
+                <div className="relative">
+                  <h4 className="font-semibold text-lg mb-3">In simple terms:</h4>
+                  <div className="space-y-2">
+                    <p className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                      <span>VIDA Select shows up a lot on Google, over 3 million times in a year.</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                      <span>But people only clicked around 10,000 times.</span>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                      <span>That's a sign that many pages are being seen but not chosen.</span>
+                    </p>
+                  </div>
+                  <p className="mt-4 text-sm">
+                    The main reason is <strong>search intent</strong>, meaning what users actually want when they search. Some of your pages match what people want, but some (especially the "login" ones) don't.
                   </p>
                 </div>
-                <p className="mt-4 text-sm">
-                  The main reason is <strong>search intent</strong>, meaning what users actually want when they search. Some of your pages match what people want, but some (especially the "login" ones) don't.
-                </p>
               </div>
             </CardContent>
           </Card>
