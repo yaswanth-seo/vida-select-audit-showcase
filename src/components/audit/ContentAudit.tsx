@@ -1,10 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, TrendingDown, AlertCircle, CheckCircle, Target, Users, Eye, MousePointer, BarChart3 } from "lucide-react";
-
 const ContentAudit = () => {
-  return (
-    <section id="content-audit" className="py-16 bg-background">
+  return <section id="content-audit" className="py-16 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -335,21 +333,7 @@ const ContentAudit = () => {
               </div>
 
               {/* C. Sugar Dating Topics */}
-              <div className="p-6 border border-destructive/30 rounded-lg bg-background">
-                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                  <span className="text-2xl">C.</span>
-                  Sugar Dating Topics
-                </h3>
-                <p className="text-base mb-3">
-                  These pages rank low (around page 4) and have very low engagement (0.16% CTR).
-                </p>
-                <div className="bg-muted/50 p-3 rounded-lg mb-3">
-                  <h4 className="font-semibold text-sm mb-1">Reason:</h4>
-                  <p className="text-sm">
-                    They attract a completely different audience, not people looking for long-term relationships or professional matchmaking. Keeping focus on VIDA's premium niche (executives, professionals, elite singles) will attract better-quality leads.
-                  </p>
-                </div>
-              </div>
+              
             </CardContent>
           </Card>
 
@@ -527,8 +511,6 @@ const ContentAudit = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContentAudit;
