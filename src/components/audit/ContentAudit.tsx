@@ -25,7 +25,7 @@ const ContentAudit = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-base leading-relaxed">
-                Over the past 12 months, VIDA Select's website has been getting good visibility on Google. People are seeing your pages in search results — that's what we call impressions. But the challenge is that most of those people are not clicking to visit the website. This report explains what's working well, what isn't, and why some pages — especially the login pages — are holding back performance. We'll go through the findings step by step, in simple words, so you can understand how the data connects to real business outcomes.
+                Over the past 12 months, VIDA Select's website has been getting good visibility on Google. People are seeing your pages in search results, which we call impressions. But the challenge is that most of those people are not clicking to visit the website. This report explains what's working well, what isn't, and why some pages, especially the login pages, are holding back performance. We'll go through the findings step by step, in simple words, so you can understand how the data connects to real business outcomes.
               </p>
             </CardContent>
           </Card>
@@ -67,20 +67,20 @@ const ContentAudit = () => {
                 <h4 className="font-semibold text-lg mb-3">In simple terms:</h4>
                 <div className="space-y-2">
                   <p className="flex items-start gap-2">
-                    <span className="text-primary mt-1">👉</span>
-                    <span>VIDA Select shows up a lot on Google — over 3 million times in a year.</span>
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span>VIDA Select shows up a lot on Google, over 3 million times in a year.</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="text-primary mt-1">👉</span>
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <span>But people only clicked around 10,000 times.</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="text-primary mt-1">👉</span>
+                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <span>That's a sign that many pages are being seen but not chosen.</span>
                   </p>
                 </div>
                 <p className="mt-4 text-sm">
-                  The main reason is <strong>search intent</strong> — meaning what users actually want when they search. Some of your pages match what people want, but some (especially the "login" ones) don't.
+                  The main reason is <strong>search intent</strong>, meaning what users actually want when they search. Some of your pages match what people want, but some (especially the "login" ones) don't.
                 </p>
               </div>
             </CardContent>
@@ -142,7 +142,7 @@ const ContentAudit = () => {
                   Elite & Luxury Dating Content
                 </h3>
                 <p className="text-base mb-4">
-                  These pages are the heart of your brand — they talk about high-end dating, exclusivity, and premium matchmaking. They perform <strong>three times better</strong> than the site average because they attract the right audience: people who value quality, privacy, and expert help.
+                  These pages are the heart of your brand. They talk about high-end dating, exclusivity, and premium matchmaking. They perform <strong>three times better</strong> than the site average because they attract the right audience: people who value quality, privacy, and expert help.
                 </p>
                 <div className="bg-muted/50 p-4 rounded-lg mb-4">
                   <h4 className="font-semibold mb-2">Example:</h4>
@@ -177,7 +177,7 @@ const ContentAudit = () => {
                 <div className="space-y-2">
                   <h4 className="font-semibold">Why it works:</h4>
                   <p className="text-sm">
-                    People searching for this type of content are already serious about improving their dating life. They are open to expert advice, which makes them potential VIDA clients. It's an easy entry point for future customers — they come for help and might stay for your service.
+                    People searching for this type of content are already serious about improving their dating life. They are open to expert advice, which makes them potential VIDA clients. It's an easy entry point for future customers. They come for help and might stay for your service.
                   </p>
                 </div>
               </div>
@@ -201,7 +201,7 @@ const ContentAudit = () => {
                 <div className="space-y-2">
                   <h4 className="font-semibold">Why it works:</h4>
                   <p className="text-sm">
-                    These readers are in the "research and decision" stage — they're comparing platforms and ready to make choices. If we guide them well, we can position VIDA as the smarter, more effective alternative to these apps.
+                    These readers are in the "research and decision" stage. They're comparing platforms and ready to make choices. If we guide them well, we can position VIDA as the smarter, more effective alternative to these apps.
                   </p>
                 </div>
               </div>
@@ -271,7 +271,7 @@ const ContentAudit = () => {
                   <div className="bg-muted/50 p-4 rounded-lg">
                     <h4 className="font-semibold mb-2">What's happening:</h4>
                     <p className="text-sm">
-                      When someone types "POF login" or "Match.com login," they just want to sign in to their account — not read an article. So even if your site shows up, nobody clicks, because the intent doesn't match. And when a few people do click, they leave immediately — which tells Google your page isn't helpful.
+                      When someone types "POF login" or "Match.com login," they just want to sign in to their account, not read an article. So even if your site shows up, nobody clicks, because the intent doesn't match. And when a few people do click, they leave immediately, which tells Google your page isn't helpful.
                     </p>
                   </div>
 
@@ -305,13 +305,13 @@ const ContentAudit = () => {
                 <div className="bg-muted/50 p-3 rounded-lg mb-3">
                   <h4 className="font-semibold text-sm mb-1">Problem:</h4>
                   <p className="text-sm">
-                    Your content gives detailed advice, but today's readers want faster, simpler formats — lists, visuals, examples.
+                    Your content gives detailed advice, but today's readers want faster, simpler formats: lists, visuals, examples.
                   </p>
                 </div>
                 <div className="bg-destructive/10 p-3 rounded-lg">
                   <h4 className="font-semibold text-sm mb-1">Result:</h4>
                   <p className="text-sm">
-                    CTR below 0.3% — people scroll past because it doesn't look like the quick help they expected.
+                    CTR below 0.3%. People scroll past because it doesn't look like the quick help they expected.
                   </p>
                 </div>
               </div>
@@ -328,7 +328,7 @@ const ContentAudit = () => {
                 <div className="bg-muted/50 p-3 rounded-lg mb-3">
                   <h4 className="font-semibold text-sm mb-1">Reason:</h4>
                   <p className="text-sm">
-                    They attract a completely different audience — not people looking for long-term relationships or professional matchmaking. Keeping focus on VIDA's premium niche (executives, professionals, elite singles) will attract better-quality leads.
+                    They attract a completely different audience, not people looking for long-term relationships or professional matchmaking. Keeping focus on VIDA's premium niche (executives, professionals, elite singles) will attract better-quality leads.
                   </p>
                 </div>
               </div>
@@ -494,12 +494,13 @@ const ContentAudit = () => {
           <Card className="mb-8 border-accent">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                💡 In Simple Words
+                <Target className="w-6 h-6 text-primary" />
+                In Simple Words
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-base leading-relaxed">
-                Think of Google visibility like foot traffic outside your store: You have a million people walking by, but only a few are stepping inside. Some windows (pages) display what your store sells — those get attention. But other windows show products from completely different stores (login pages for Match.com, POF) — and people walk past confused.
+                Think of Google visibility like foot traffic outside your store: You have a million people walking by, but only a few are stepping inside. Some windows (pages) display what your store sells and those get attention. But other windows show products from completely different stores (login pages for Match.com, POF) and people walk past confused.
               </p>
               <p className="text-base leading-relaxed">
                 Right now, VIDA Select has excellent "windows" for elite matchmaking and dating profile help. Those are attracting the right customers. The goal is to add more of those premium windows and remove the confusing ones that are just taking up space.

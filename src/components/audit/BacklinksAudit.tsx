@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link as LinkIcon, TrendingUp, Shield, AlertTriangle } from "lucide-react";
+import { Link as LinkIcon, TrendingUp, Shield, AlertTriangle, AlertCircle } from "lucide-react";
 
 const BacklinksAudit = () => {
   return (
@@ -288,7 +288,7 @@ const BacklinksAudit = () => {
                   <td className="py-4 px-2 text-sm text-muted-foreground">Automated link farm; non-indexed. No real SEO harm but no benefit.</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Generic directory</td>
+                  <td className="py-4 px-2 font-medium">businesslistingplus.com</td>
                   <td className="text-center py-4 px-2">
                     <Badge variant="outline" className="border-destructive text-destructive">Directory</Badge>
                   </td>
@@ -299,7 +299,7 @@ const BacklinksAudit = () => {
                   <td className="py-4 px-2 text-sm text-muted-foreground">Random directory listing. Not spammy but irrelevant; low authority.</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Auto scraper</td>
+                  <td className="py-4 px-2 font-medium">webcrawlerbot.io</td>
                   <td className="text-center py-4 px-2">
                     <Badge variant="outline" className="border-destructive text-destructive">Scraper</Badge>
                   </td>
@@ -310,7 +310,7 @@ const BacklinksAudit = () => {
                   <td className="py-4 px-2 text-sm text-muted-foreground">AI or bot scraper. Common; safe to ignore.</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Content farm</td>
+                  <td className="py-4 px-2 font-medium">contentspinner.net</td>
                   <td className="text-center py-4 px-2">
                     <Badge variant="outline" className="border-destructive text-destructive">Content Farm</Badge>
                   </td>
@@ -321,7 +321,7 @@ const BacklinksAudit = () => {
                   <td className="py-4 px-2 text-sm text-muted-foreground">Unrelated context (apps, not human matchmaking). Weak topical signal.</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="py-4 px-2 font-medium">Blog aggregator</td>
+                  <td className="py-4 px-2 font-medium">blogrollsites.com</td>
                   <td className="text-center py-4 px-2">
                     <Badge variant="outline" className="border-destructive text-destructive">Aggregator</Badge>
                   </td>
@@ -391,10 +391,15 @@ const BacklinksAudit = () => {
           </div>
 
           <div className="p-6 bg-info/10 rounded-xl">
-            <h4 className="font-semibold text-foreground mb-3">🔍 Insight</h4>
-            <p className="text-sm text-muted-foreground">
-              The high index rate for Best Links means Google already counts them as live endorsements. The low index rate for Other Links shows most spammy backlinks are not even being seen by Google — meaning they don't harm you.
-            </p>
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-info mt-0.5 flex-shrink-0" />
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">Insight</h4>
+                <p className="text-sm text-muted-foreground">
+                  The high index rate for Best Links means Google already counts them as live endorsements. The low index rate for Other Links shows most spammy backlinks are not even being seen by Google, meaning they don't harm you.
+                </p>
+              </div>
+            </div>
           </div>
         </Card>
 
