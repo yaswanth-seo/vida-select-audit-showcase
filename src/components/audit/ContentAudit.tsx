@@ -1,10 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, TrendingDown, AlertCircle, CheckCircle, Target, Users, Eye, MousePointer, BarChart3 } from "lucide-react";
-
 const ContentAudit = () => {
-  return (
-    <section id="content-audit" className="py-16 bg-background">
+  return <section id="content-audit" className="py-16 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -206,9 +204,7 @@ const ContentAudit = () => {
                   <span className="text-2xl">3.</span>
                   Comparison & Premium Feature Pages
                 </h3>
-                <p className="text-base mb-4">
-                  These pages talk about paid versions of dating apps — like Tinder Gold, Hinge+, or CMB Premium.
-                </p>
+                <p className="text-base mb-4">These pages talk about paid versions of dating apps like Tinder Gold, Hinge+, or CMB Premium.</p>
                 <div className="bg-muted/50 p-4 rounded-lg mb-4">
                   <h4 className="font-semibold mb-2">Examples:</h4>
                   <ul className="space-y-1 text-sm">
@@ -527,8 +523,6 @@ const ContentAudit = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContentAudit;
