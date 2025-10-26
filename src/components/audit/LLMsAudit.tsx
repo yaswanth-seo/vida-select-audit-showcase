@@ -14,6 +14,63 @@ const LLMsAudit = () => {
           </p>
         </div>
 
+        {/* Key Terminology */}
+        <Card className="p-8 mb-8 bg-gradient-to-br from-info/5 to-info/10 border-2 border-info/20">
+          <h3 className="text-2xl font-bold text-foreground mb-6">Key Terminology (Plain Definitions)</h3>
+          <p className="text-muted-foreground mb-6">
+            Before reading the analysis, here's what each main term means:
+          </p>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-border">
+                  <th className="text-left py-3 px-2 font-semibold">Term</th>
+                  <th className="text-left py-3 px-2 font-semibold">Meaning</th>
+                  <th className="text-left py-3 px-2 font-semibold">Why It Matters</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-border bg-background">
+                  <td className="py-4 px-2 font-medium">Visibility</td>
+                  <td className="py-4 px-2 text-muted-foreground">How often VIDA appears in AI-generated responses. If 8%, it means VIDA appears in 8 out of every 100 AI answers about matchmaking.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Shows how much AI systems recognize the brand.</td>
+                </tr>
+                <tr className="border-b border-border bg-background">
+                  <td className="py-4 px-2 font-medium">Top 3 Visibility</td>
+                  <td className="py-4 px-2 text-muted-foreground">The percentage of times VIDA appears among the top three results or recommendations inside AI responses.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Higher top-3 visibility means AI prefers recommending VIDA over others.</td>
+                </tr>
+                <tr className="border-b border-border bg-background">
+                  <td className="py-4 px-2 font-medium">Average Position</td>
+                  <td className="py-4 px-2 text-muted-foreground">The typical ranking spot where VIDA appears when mentioned (e.g., position 5 means middle of the list).</td>
+                  <td className="py-4 px-2 text-muted-foreground">Lower number = stronger visibility.</td>
+                </tr>
+                <tr className="border-b border-border bg-background">
+                  <td className="py-4 px-2 font-medium">Detection Rate</td>
+                  <td className="py-4 px-2 text-muted-foreground">How consistently AI systems identify VIDA's brand when it appears.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Shows how accurately AI recognizes VIDA as a brand. 100% means every mention was correctly detected.</td>
+                </tr>
+                <tr className="border-b border-border bg-background">
+                  <td className="py-4 px-2 font-medium">Citations</td>
+                  <td className="py-4 px-2 text-muted-foreground">Instances where an AI system includes VIDA Select as a source or reference in its response.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Citations act like "backlinks" for AI — the more citations, the higher the trust.</td>
+                </tr>
+                <tr className="border-b border-border bg-background">
+                  <td className="py-4 px-2 font-medium">Sentiment</td>
+                  <td className="py-4 px-2 text-muted-foreground">How positive, neutral, or negative the AI-generated mentions are about VIDA (scored from 0–100).</td>
+                  <td className="py-4 px-2 text-muted-foreground">Reflects AI's tone toward the brand — high sentiment = more trustworthy reputation.</td>
+                </tr>
+                <tr className="border-b border-border bg-background">
+                  <td className="py-4 px-2 font-medium">Coverage</td>
+                  <td className="py-4 px-2 text-muted-foreground">The variety of relevant topics and search terms where VIDA appears.</td>
+                  <td className="py-4 px-2 text-muted-foreground">Broader coverage means AI associates VIDA with more matchmaking-related topics.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Card>
+
         {/* What This Audit Measures */}
         <Card className="p-8 mb-8 bg-gradient-to-br from-warning/5 to-warning/10 border-2 border-warning/20">
           <h3 className="text-2xl font-bold text-foreground mb-6">What This Audit Measures</h3>
@@ -209,6 +266,50 @@ const LLMsAudit = () => {
           </div>
         </Card>
 
+        {/* Citation Analysis */}
+        <Card className="p-8 mb-8 border-2 border-warning/30 bg-warning/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-xl bg-warning/20 flex items-center justify-center">
+              <Brain className="w-6 h-6 text-warning" />
+            </div>
+            <h3 className="text-2xl font-bold text-foreground">Citation Analysis</h3>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="font-semibold text-foreground">VIDA Citations</h4>
+                <Badge className="bg-warning text-warning-foreground">48</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mb-3">
+                VIDA has been directly cited or referenced 48 times by AI systems
+              </p>
+              <p className="text-xs text-muted-foreground">Citations are like "backlinks" for AI</p>
+            </div>
+
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="font-semibold text-foreground">Top Competitor</h4>
+                <Badge className="bg-success text-success-foreground">219</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mb-3">
+                Kelleher International has 219 citations (4-5× more than VIDA)
+              </p>
+              <p className="text-xs text-muted-foreground">Higher citation count = AI trusts source more</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-warning/10 to-warning/5 rounded-xl p-6 border border-warning/20">
+            <h4 className="font-semibold text-foreground mb-4">What This Means</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li>• Citations function like backlinks in traditional SEO — they signal authority to AI models</li>
+              <li>• Competitors with higher citation counts dominate the "trusted source" layer of AI systems</li>
+              <li>• To increase citations, VIDA needs to appear in major articles, interviews, and knowledge panels that AI systems scrape</li>
+              <li>• Publishing factual data, industry comparisons, and securing media mentions will boost citation count</li>
+            </ul>
+          </div>
+        </Card>
+
         {/* Sentiment Analysis */}
         <Card className="p-8 mb-8">
           <h3 className="text-2xl font-bold text-foreground mb-6">Sentiment Analysis</h3>
@@ -233,6 +334,16 @@ const LLMsAudit = () => {
             </div>
           </div>
 
+          <div className="mb-6 p-6 bg-background rounded-xl">
+            <h4 className="font-semibold text-foreground mb-4">Interpretation</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>• AI-generated descriptions about VIDA are balanced, professional, slightly reserved, and fact-focused</li>
+              <li>• Top competitors have warmer, story-like mentions tied to success outcomes</li>
+              <li>• VIDA's sentiment is positive but not emotionally strong compared to competitors</li>
+              <li>• Tone is descriptive rather than promotional, which is good for trust but could be more inspiring</li>
+            </ul>
+          </div>
+
           <div className="bg-gradient-to-br from-info/10 to-info/5 rounded-xl p-6 border border-info/20">
             <h4 className="font-semibold text-foreground mb-4">How to Improve Sentiment</h4>
             <div className="grid md:grid-cols-3 gap-4">
@@ -242,7 +353,7 @@ const LLMsAudit = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">Success Stories</p>
-                  <p className="text-xs text-muted-foreground">Publish client testimonials in trusted sources</p>
+                  <p className="text-xs text-muted-foreground">Publish client testimonials and success stories in trusted sources that AI can access</p>
                 </div>
               </div>
               
@@ -252,7 +363,7 @@ const LLMsAudit = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">Expert Opinions</p>
-                  <p className="text-xs text-muted-foreground">Feature brand storytelling in high-authority publications</p>
+                  <p className="text-xs text-muted-foreground">Feature brand storytelling and expert opinions in high-authority publications</p>
                 </div>
               </div>
               
@@ -262,7 +373,7 @@ const LLMsAudit = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground mb-1">Positive Context</p>
-                  <p className="text-xs text-muted-foreground">Ensure AI sees consistent positive mentions</p>
+                  <p className="text-xs text-muted-foreground">Ensure AI sees consistent positive mentions and context across platforms</p>
                 </div>
               </div>
             </div>
@@ -284,6 +395,30 @@ const LLMsAudit = () => {
                 </tr>
               </thead>
               <tbody>
+                <tr className="border-b border-border">
+                  <td className="py-4 px-2 font-medium">LUMA Matchmaking</td>
+                  <td className="text-center py-4 px-2">
+                    <Badge className="bg-info text-info-foreground">10.5%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">
+                    <Badge className="bg-info text-info-foreground">7%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">3.6</td>
+                  <td className="text-center py-4 px-2">153</td>
+                  <td className="text-center py-4 px-2">74.6</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-4 px-2 font-medium">Elite Connections</td>
+                  <td className="text-center py-4 px-2">
+                    <Badge variant="outline">6.8%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">
+                    <Badge variant="outline">4%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">7.2</td>
+                  <td className="text-center py-4 px-2">67</td>
+                  <td className="text-center py-4 px-2">68.1</td>
+                </tr>
                 <tr className="border-b border-border">
                   <td className="py-4 px-2">what is vida select</td>
                   <td className="text-center py-4 px-2">
@@ -333,6 +468,46 @@ const LLMsAudit = () => {
                     <Badge className="bg-info text-info-foreground">4.9</Badge>
                   </td>
                   <td className="text-center py-4 px-2">66%</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-4 px-2">professional matchmaker near me</td>
+                  <td className="text-center py-4 px-2">
+                    <Badge variant="outline">33%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">
+                    <Badge variant="outline">9.5</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">62%</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-4 px-2">elite dating services for executives</td>
+                  <td className="text-center py-4 px-2">
+                    <Badge variant="outline">33%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">
+                    <Badge variant="outline">11.2</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">67%</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-4 px-2">hire a matchmaker with proven success rate</td>
+                  <td className="text-center py-4 px-2">
+                    <Badge variant="outline">33%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">
+                    <Badge className="bg-info text-info-foreground">8.0</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">71%</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-4 px-2">vida select reviews</td>
+                  <td className="text-center py-4 px-2">
+                    <Badge className="bg-success text-success-foreground">100%</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">
+                    <Badge className="bg-success text-success-foreground">1.0</Badge>
+                  </td>
+                  <td className="text-center py-4 px-2">64%</td>
                 </tr>
               </tbody>
             </table>
@@ -401,6 +576,164 @@ const LLMsAudit = () => {
                 <p className="text-xs text-muted-foreground">
                   Build "success story" and "client transformation" narratives to elevate positivity
                 </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Areas to Improve */}
+        <Card className="p-8 mb-8 bg-gradient-to-br from-warning/5 to-warning/10 border-2 border-warning/20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-xl bg-warning/20 flex items-center justify-center">
+              <AlertCircle className="w-6 h-6 text-warning" />
+            </div>
+            <h3 className="text-2xl font-bold text-foreground">Areas to Improve</h3>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="font-semibold text-foreground">⚠️ Top 3 Visibility (3%)</h4>
+                <Badge className="bg-warning text-warning-foreground">Priority</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                VIDA appears in AI answers but not as one of the "top recommended" brands. When AI lists matchmakers, VIDA typically ranks 5-6th, not in the crucial top 3 positions.
+              </p>
+              <div className="p-4 bg-info/10 rounded-lg">
+                <p className="text-sm font-medium text-foreground mb-2">How to Improve:</p>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Add structured data (schema markup, FAQs) to help AI understand content better</li>
+                  <li>• Publish expert mentions and thought leadership content</li>
+                  <li>• Build more high-authority citations to boost trust signals</li>
+                  <li>• Ensure consistent brand positioning across all online mentions</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="font-semibold text-foreground">⚠️ Limited Citations (48)</h4>
+                <Badge variant="outline" className="border-warning text-warning">Gap</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Competitors get 4–5× more citations. Kelleher has 219 citations vs VIDA's 48. Citations are critical — they tell AI which sources to trust and recommend.
+              </p>
+              <div className="p-4 bg-info/10 rounded-lg">
+                <p className="text-sm font-medium text-foreground mb-2">How to Improve:</p>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Secure mentions in major articles, interviews, and media outlets AI scrapes</li>
+                  <li>• Publish original research, data, and industry reports</li>
+                  <li>• Create comprehensive comparison guides and educational content</li>
+                  <li>• Build relationships with journalists and industry publications</li>
+                  <li>• Develop knowledge panel presence on major platforms</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="font-semibold text-foreground">⚠️ Moderate Sentiment (66.6%)</h4>
+                <Badge variant="outline" className="border-warning text-warning">Below Average</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Tone is positive but not emotionally strong. Industry average is 68.7%, and top competitors reach 74-78%. VIDA's mentions are professional but lack the warmth and success stories that resonate with AI models.
+              </p>
+              <div className="p-4 bg-info/10 rounded-lg">
+                <p className="text-sm font-medium text-foreground mb-2">How to Improve:</p>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Build "success story" and "client transformation" narratives</li>
+                  <li>• Feature real testimonials and case studies in trusted publications</li>
+                  <li>• Highlight positive outcomes and emotional benefits of service</li>
+                  <li>• Create content that emphasizes results, not just process</li>
+                  <li>• Encourage satisfied clients to share experiences publicly</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h4 className="font-semibold text-foreground">⚠️ Niche Awareness Gaps</h4>
+                <Badge variant="outline">Coverage</Badge>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                AI models don't yet associate VIDA with all relevant topics like "executive matchmaking," "elite professional dating," or "luxury relationship services." Topic coverage is narrower than competitors.
+              </p>
+              <div className="p-4 bg-info/10 rounded-lg">
+                <p className="text-sm font-medium text-foreground mb-2">How to Improve:</p>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>• Expand content vocabulary around executive, luxury, and lifestyle dating</li>
+                  <li>• Create topic-specific landing pages for different client segments</li>
+                  <li>• Build consistent topical mentions across multiple platforms</li>
+                  <li>• Develop content around adjacent topics AI associates with premium matchmaking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Strengths */}
+        <Card className="p-8 mb-8 border-2 border-success/30 bg-success/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
+              <TrendingUp className="w-6 h-6 text-success" />
+            </div>
+            <h3 className="text-2xl font-bold text-foreground">Strengths</h3>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-success/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-sm font-bold text-success">✓</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">AI Models Recognize VIDA</h4>
+                  <p className="text-sm text-muted-foreground">
+                    100% detection means the brand is correctly identified everywhere. AI systems know who VIDA Select is and consistently recognize the brand across all platforms and queries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-success/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-sm font-bold text-success">✓</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Positive Reputation</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Sentiment above 65% shows AI sees VIDA as a trusted professional service. The tone is consistently professional and favorable, with no negative patterns detected.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-success/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-sm font-bold text-success">✓</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Multi-Engine Presence</h4>
+                  <p className="text-sm text-muted-foreground">
+                    VIDA appears across Google AI and ChatGPT, meaning it's included in modern AI ecosystems. This foundational presence is critical for future AI visibility growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-background rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-success/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-sm font-bold text-success">✓</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">Brand Authority</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Ranks #1 for "what is VIDA select," showing strong brand identity. When people search directly for VIDA, AI systems provide accurate, authoritative information.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
