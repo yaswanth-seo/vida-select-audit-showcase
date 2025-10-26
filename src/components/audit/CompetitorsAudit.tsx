@@ -598,11 +598,6 @@ const CompetitorsAudit = () => {
               </div>
             </div>
 
-            <div className="mt-6 p-6 bg-white/5 rounded-lg border border-white/20">
-              <p className="text-lg font-medium">
-                "Modern, high-standard, screened matchmaking for professionals who are done wasting time on apps."
-              </p>
-            </div>
           </div>
         </Card>
       </div>
